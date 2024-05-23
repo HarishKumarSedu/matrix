@@ -25,9 +25,8 @@ class MatrixDriver(QtWidgets.QMainWindow, Ui_MainWindow):
         self.closeButton.clicked.connect(self.mainWindowClosing) # type: ignore
         self.matrixLayout = {}
         self.matrixIndex = 0
-        with open('styles/app.qss',"r") as appStyles :
-            app.setStyleSheet(appStyles.read())
-    
+        with open(os.path.join(os.path.dirname(__file__),'styles/scrollAreaFrame.qss'), 'r') as file:
+            self.scrollArea.setStyleSheet(file.read())
     def mainWindowClosing(self):
         for _,matrix in self.matrixLayout.items():
             sleep(1)
@@ -101,7 +100,7 @@ class MatrixDriver(QtWidgets.QMainWindow, Ui_MainWindow):
 def MatrixDriver_gui():
     app = QtWidgets.QApplication(sys.argv)
     window = MatrixDriver()
-    with open('styles/app.qss',"r") as appStyles :
+    with open(os.path.join(os.path.dirname(__file__),'styles/app.qss'),"r") as appStyles :
         app.setStyleSheet(appStyles.read())
     window.show()
     sys.exit(app.exec())
@@ -109,7 +108,7 @@ def MatrixDriver_gui():
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MatrixDriver()
-    with open('styles/app.qss',"r") as appStyles :
+    with open(os.path.join(os.path.dirname(__file__),'styles/app.qss'),"r") as appStyles :
         app.setStyleSheet(appStyles.read())
     window.show()
     sys.exit(app.exec())

@@ -25,7 +25,7 @@ setup(
     name=f'IvmDriver',
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    version='0.0.8',
+    version='0.0.9',
     # py_modules=['src'],
     # description=[ 'text/markdown','text/x-rst'],
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",

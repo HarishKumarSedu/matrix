@@ -34,4 +34,4 @@ jobs:
     steps:
       - name: Install pypi Package IvmDriver
         run: |
-          pip install -U IvmDriver
+          pip install IvmDriver

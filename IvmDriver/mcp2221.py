@@ -8,7 +8,7 @@ class MCP2221:
         # self.mcp.Reset()
         self.mcp2221 = PyMCP2221A.PyMCP2221A()
         self.mcp2221.I2C_Init()
-        self.mcp2221.mcp2221.GPIO_Init() # initialize the mcp gpios 
+        self.mcp2221.GPIO_Init() # initialize the mcp gpios 
     
     def ConfigGPIO0(self,outp=True):
         if outp:

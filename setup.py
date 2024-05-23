@@ -25,7 +25,7 @@ setup(
     name=f'IvmDriver',
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    version='0.0.7',
+    version='0.0.8',
     # py_modules=['src'],
     # description=[ 'text/markdown','text/x-rst'],
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
@@ -39,7 +39,7 @@ setup(
     include_package_data=True,
     # include_dirs=['IvmDriver'],
     data_files = files,
-    install_requires=['pymcp2221a','pyqt5','setuptools','pathlib','PyVISA'],
+    install_requires=['pymcp2221a','pyqt5','setuptools','pathlib','PyVISA','rich'],
     
 
     

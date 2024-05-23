@@ -8,8 +8,49 @@ class MCP2221:
         # self.mcp.Reset()
         self.mcp2221 = PyMCP2221A.PyMCP2221A()
         self.mcp2221.I2C_Init()
+        self.mcp2221.mcp2221.GPIO_Init() # initialize the mcp gpios 
     
-    def Reset(self):
+    def ConfigGPIO0(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_0_OutputMode() # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_0_InputMode() # set the gpio as output 
+    def ConfigGPIO1(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_1_OutputMode() # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_1_InputMode() # set the gpio as output 
+    def ConfigGPIO2(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_2_OutputMode() # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_2_InputMode() # set the gpio as output 
+    def ConfigGPIO3(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_3_OutputMode() # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_3_InputMode() # set the gpio as output 
+    def GPIO0(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_0_Output(1) # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_0_Output(0) # set the gpio as output 
+    def GPIO1(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_1_Output(1) # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_1_Output(0) # set the gpio as output 
+    def GPIO2(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_2_Output(1) # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_2_Output(0) # set the gpio as output 
+    def GPIO3(self,outp=True):
+        if outp:
+            self.mcp2221.GPIO_3_Output(1) # set the gpio as output 
+        else:
+            self.mcp2221.GPIO_3_Output(0) # set the gpio as output 
+    def reset(self):
         self.mcp2221.Reset()
         sleep(0.1)
         self.mcp2221.I2C_Init()
